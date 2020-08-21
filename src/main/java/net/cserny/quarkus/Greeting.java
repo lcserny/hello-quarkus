@@ -1,15 +1,15 @@
 package net.cserny.quarkus;
 
-import io.quarkus.mongodb.panache.MongoEntity;
-import io.quarkus.mongodb.panache.PanacheMongoEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.ws.rs.NotFoundException;
 
-@MongoEntity
-public class Greeting extends PanacheMongoEntity {
+@Entity
+public class Greeting extends PanacheEntity {
 
     @NotNull
     @NotEmpty

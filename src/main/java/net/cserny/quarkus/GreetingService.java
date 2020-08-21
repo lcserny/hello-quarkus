@@ -14,6 +14,9 @@ class GreetingService {
         if (!StringUtil.isNullOrEmpty(greeting.prefix)) {
             prefix = greeting.prefix;
         }
+        if (greeting.name.equals("Leo")) {
+            greeting.name = "Master Leo";
+        }
         return prefix + " " + greeting.name;
     }
 

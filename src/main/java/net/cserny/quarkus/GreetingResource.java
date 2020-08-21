@@ -25,9 +25,6 @@ public class GreetingResource {
     @Consumes(MediaType.TEXT_PLAIN)
     @Path("/greeting/{name}")
     public String greeting(@PathParam("name") String name) {
-        if (name.equals("Leo")) {
-            name = "Master Leo";
-        }
         return greetingService.greeting(name);
     }
 
